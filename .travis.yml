@@ -1,0 +1,30 @@
+dist: trusty
+sudo: false
+branches:
+  only:
+  - master
+
+language: python
+python:
+- '2.7'
+- '3.3'
+- '3.4'
+- '3.5'
+- '3.6'
+
+before_install:
+- pip install pipenv
+install:
+- pipenv install --dev --deploy
+script:
+- echo "Script goes here!"
+
+deploy:
+  provider: pypi
+  user: "KeltonKarboviak"
+  password:
+    secure: "gGz4RHqAsrUEtNryvBxvZrN0XU9Ix5wm15AMs3N9WmSILlb5V+GwrRlKzJ0BLD4lky/BoBtlBPEWU4YH4NkuhkJ87j1iiwL4SShbysKKcKz5kVpFs6WgnEhN7aIlf488b14ymM0/Zu4+QcwNCLlvCJgXag9aPL8bWK8Gfl8HBVzESp1Iv+nGZYNenEyC11fdDRzTtpPhKALt+S9EbnBvSzTYz5qmMljCsMKXdOzDfEXvdBEaxhToKqaWwQK+hmJMQUssQT0LpcZenXGvqBTRb7002RRgiDu3CCgHZ8wBQ3KxPvDsDx9RURn7n0qGHRhCajF3OoLac7mL2gawHdDGjGH2NXZ18IG1ev3ebxlGtGbRu4scumX8GCIU81LfTjy+j9ktPrKo43f5xkQ+GJEJZrnqdrIkN157WEQoijFz6xiNKQh59Ioi0q7PLjctwox9lHx8OrO81mU6qVjxil0TydhnbssUDaVaDP6mhBR9YO8/9rANmqE5F3Z+oUdPh/Ksp3JVJfCTlAXK3d1zMiVe5SawOosDmbHBIyIf09vgWDkNbbYdmdhzQnv259R8Z4sdeOiZYzPcSitqta/g2HxPL3pcljQf6OnAF2F3RqGYnaO65Sf1rC0BsY3dUpocXuWBYHlEmx2+YyLjJFjx5NsTMKV2iviUZpOt7JXYrTYIby8="
+  distributions: sdist bdist_wheel
+  on:
+    branch: master
+    tags: true

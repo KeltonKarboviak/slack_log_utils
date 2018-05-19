@@ -1,5 +1,8 @@
 # Release Notes
 
+## 0.1.2 (2018-05-19)
+* Added .travis.yml file for Travis-CI builds.
+
 ## 0.1.1 (2018-05-19)
 * Bumped version for README changes to show on PyPI.
 
