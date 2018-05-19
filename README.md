@@ -1,6 +1,12 @@
 # slack_log_utils
-A Python logging handler & formatter for Slack integration.
 
+[![PyPI](https://img.shields.io/pypi/v/slack_log_utils.svg)](https://pypi.org/project/slack-log-utils/)
+[![PyPI](https://img.shields.io/pypi/l/slack_log_utils.svg)](https://pypi.org/project/slack-log-utils/)
+[![PyPI](https://img.shields.io/pypi/pyversions/slack_log_utils.svg)](https://pypi.org/project/slack-log-utils/)
+[![Build Status](https://img.shields.io/travis/KeltonKarboviak/slack_log_utils.svg?logo=travis)](https://travis-ci.org/KeltonKarboviak/slack_log_utils)
+[![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/KeltonKarboviak)
+
+A Python logging handler & formatter for Slack integration.
 
 ### How To Install
 To install slack-log-utils, simply:
