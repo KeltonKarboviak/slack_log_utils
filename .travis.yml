@@ -3,6 +3,7 @@ sudo: false
 branches:
   only:
   - master
+  - /v\d+\.\d+\.\d+/
 
 language: python
 python:
@@ -28,3 +29,4 @@ deploy:
   on:
     branch: master
     tags: true
+  skip_cleanup: true
