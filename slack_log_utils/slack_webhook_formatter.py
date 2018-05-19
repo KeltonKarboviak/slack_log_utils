@@ -36,7 +36,5 @@ class SlackWebhookFormatter(logging.Formatter):
         }
 
         return json.dumps({
-            'attachments': [
-                attachment
-            ]
+            'attachments': [attachment],
         })
