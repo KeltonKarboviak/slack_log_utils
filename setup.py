@@ -1,38 +1,45 @@
 # -*- coding: utf-8 -*-
 
+from codecs import open
+from os import path
 
 from setuptools import setup
 
 
-def readme():
-    with open('README.md', 'r') as fp:
-        return fp.read()
+here = path.abspath(path.dirname(__file__))
 
+with open(path.join(here, 'README.md'), 'r', encoding='utf-8') as fp:
+    long_description = fp.read()
 
 setup(
     name='slack_log_utils',
-    version='0.1',
+    version='0.1.0',
     description='A Python logging handler for Slack integration',
-    long_description=readme(),
+    long_description=long_description,
+    long_description_content_type='text/markdown',
     classifiers=[
+        'Development Status :: 4 - Beta',
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.6',
         'Topic :: System :: Logging'
     ],
-    keywords='logging slack slack-webhook ngafid',
+    keywords='logging slack slack-webhook',
     url='https://github.com/ngafid/slack-log-utils',
     author='KeltonKarboviak',
     author_email='kelton.karboviak@gmail.com',
     license='MIT',
     packages=['slack_log_utils'],
     install_requires=[
-        'requests',
+        'requests>=2.18.0',
     ],
+    extras_require={
+        'test': ['nose'],
+    },
     include_package_data=True,
     zip_safe=False,
-
-    test_suite='nose.collector',
-    tests_require=['nose'],
+    project_urls={
+        'Say Thanks!': 'https://saythanks.io/to/KeltonKarboviak',
+    },
 )
