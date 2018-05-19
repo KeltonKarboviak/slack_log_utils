@@ -1,9 +1,5 @@
 dist: trusty
 sudo: false
-branches:
-  only:
-  - master
-  - /v\d+\.\d+\.\d+/
 
 language: python
 python:
