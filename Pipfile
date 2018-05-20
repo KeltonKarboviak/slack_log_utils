@@ -8,6 +8,7 @@ requests = ">=2.18.0"
 
 [dev-packages]
 twine = "*"
+bumpversion = "*"
 
 [requires]
 python_version = "3.6"
